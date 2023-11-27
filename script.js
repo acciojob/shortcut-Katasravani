@@ -15,4 +15,4 @@ const userInput2 = prompt('Enter the second string:');
 const result = shortcut(userInput1, userInput2);
 
 // Displaying the result
-alert('Result: ' + result);
+alert(result);
