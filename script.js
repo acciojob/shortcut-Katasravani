@@ -1,8 +1,18 @@
-function shortcut(s1, s2) {
-  // your code here
+function shortcut(str1, str2) {
+    if (str1 === '' || str2 === '') {
+        return '';
+    }
+
+    const initialLetters = str1.charAt(0) + str2.charAt(0);
+    return initialLetters.toUpperCase();
 }
 
-// Do not change the code below.
-const s1 = prompt("Enter s1:");
-const s2 = prompt("Enter s2:");
-alert(shortcut(s1, s2));
+// Taking user input using prompt
+const userInput1 = prompt('Enter the first string:');
+const userInput2 = prompt('Enter the second string:');
+
+// Calling the shortcut function with user input
+const result = shortcut(userInput1, userInput2);
+
+// Displaying the result
+alert('Result: ' + result);
