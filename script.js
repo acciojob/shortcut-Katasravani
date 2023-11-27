@@ -4,7 +4,7 @@ function shortcut(str1, str2) {
     }
 
     const initialLetters = str1.charAt(0) + str2.charAt(0);
-    return initialLetters.toUpperCase();
+    return initialLetters.toLowerCase();
 }
 
 // Taking user input using prompt
