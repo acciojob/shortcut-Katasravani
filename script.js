@@ -3,8 +3,15 @@ function shortcut(str1, str2) {
         return '';
     }
 
-    const initialLetters = str1.charAt(0) + str2.charAt(0);
-    return initialLetters.toUpperCase();
+    const firstLetterStr1 = str1.charAt(0);
+    const firstLetterStr2 = str2.charAt(0);
+
+    // Swap the case of the initial letters
+    const initialLetters = (firstLetterStr1 === firstLetterStr1.toUpperCase() && firstLetterStr1 === firstLetterStr1.toUpperCase())
+        ? firstLetterStr1.toLowerCase() + firstLetterStr2.toLowerCase()
+        : firstLetterStr1.toUpperCase() + firstLetterStr2.toUpperCase();
+
+    return initialLetters;
 }
 
 // Taking user input using prompt
@@ -15,4 +22,4 @@ const userInput2 = prompt('Enter the second string:');
 const result = shortcut(userInput1, userInput2);
 
 // Displaying the result
-alert(result);
+alert('Result: ' + result);
